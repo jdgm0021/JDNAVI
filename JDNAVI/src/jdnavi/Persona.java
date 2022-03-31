@@ -7,9 +7,9 @@ public class Persona {
     int edad;//Edad de la persona
 
     public Persona(int edadPersona) {
-        this.genero = ((int) Math.floor(Math.random()*2)) == 0;
+        this.genero = ((int) Math.floor(Math.random()*2)) == 0;//Género aleatorio
         this.edad = edadPersona;
-        if(genero){
+        if(genero){//Nombres aleatorios para hombres
             int ale=(int)(Math.ceil(Math.random()*25));
             switch (ale){
                 case 1:
@@ -88,7 +88,7 @@ public class Persona {
                     this.nombre="Vicente Manuel";
                     break;      
             }
-        }else{
+        }else{//Nombres aleatorios para mujeres
             int ale=(int)(Math.ceil(Math.random()*25));
             switch (ale){
                 case 1:
