@@ -2,9 +2,9 @@
 package jdnavi;
 
 public class Persona {
-    String nombre;                  //nombre de la persona
-    boolean genero;                 //genero de la persona; True -> Hombre; False -> Mujer
-    int edad;                       //edad de la persona
+    String nombre;//Nombre de la persona
+    boolean genero;//Genero de la persona; True -> Hombre; False -> Mujer
+    int edad;//Edad de la persona
 
     public Persona(int edadPersona) {
         this.genero = ((int) Math.floor(Math.random()*2)) == 0;
@@ -86,8 +86,86 @@ public class Persona {
                     break;
                 case 25:
                     this.nombre="Vicente Manuel";
+                    break;      
+            }
+        }else{
+            int ale=(int)(Math.ceil(Math.random()*25));
+            switch (ale){
+                case 1:
+                    this.nombre="Puri";
                     break;
-                    
+                case 2:
+                    this.nombre="Ana";
+                    break;
+                case 3:
+                    this.nombre="María";
+                    break;
+                case 4:
+                    this.nombre="Marta";
+                    break;
+                case 5:
+                    this.nombre="Marta del Pilar";
+                    break;
+                case 6:
+                    this.nombre="Pepa";
+                    break;
+                case 7:
+                    this.nombre="Antonio";
+                    break;
+                case 8:
+                    this.nombre="Juana";
+                    break;
+                case 9:
+                    this.nombre="Josefa";
+                    break;
+                case 10:
+                    this.nombre="Daniela";
+                    break;
+                case 11:
+                    this.nombre="Juana del Pilar";
+                    break;
+                case 12:
+                    this.nombre="Davinia";
+                    break;
+                case 13:
+                    this.nombre="Alejandra";
+                    break;
+                case 14:
+                    this.nombre="Enriqueta";
+                    break;
+                case 15:
+                    this.nombre="Manuela";
+                    break;
+                case 16:
+                    this.nombre="Ángela";
+                    break;
+                case 17:
+                    this.nombre="Rocío";
+                    break;
+                case 18:
+                    this.nombre="Mariana";
+                    break;
+                case 19:
+                    this.nombre="Mariana del Rocío";
+                    break;
+                case 20:
+                    this.nombre="Lola";
+                    break;
+                case 21:
+                    this.nombre="Marisol";
+                    break;
+                case 22:
+                    this.nombre="Almudena";
+                    break;
+                case 23:
+                    this.nombre="Vicenta";
+                    break;
+                case 24:
+                    this.nombre="Juana del Mar";
+                    break;
+                case 25:
+                    this.nombre="María del Mar";
+                    break;      
             }
         }
     }
