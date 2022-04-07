@@ -9,4 +9,10 @@ public class Fruteria {
     private ArrayList<Persona> cola;
     private ArrayList<Persona> personasAtendidas;
     
+    public Fruteria(String name){
+        this.nombre=name;
+        this.cola= new ArrayList<>();
+        this.personasAtendidas= new ArrayList<>();
+    }
+    
 }
