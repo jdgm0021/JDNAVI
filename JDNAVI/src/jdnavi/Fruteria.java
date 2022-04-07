@@ -14,4 +14,8 @@ public class Fruteria {
         this.cola= new ArrayList<>();
         this.personasAtendidas= new ArrayList<>();
     }
+    
+    public void añadirCliente(){
+        cola.add(new Persona());
+    }
 }
