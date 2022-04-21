@@ -26,4 +26,8 @@ public class Fruteria {
         cola.remove(0);
         
     }
+
+    public ArrayList<Persona> getCola() {
+        return cola;
+    }
 }
