@@ -23,6 +23,7 @@ public class Fruteria {
     
     public void atenderCliente(){
         System.out.println("Se ha atendido al cliente " + cola.get(0).nombre);
+        personasAtendidas.add(cola.get(0));
         cola.remove(0);
         
     }
