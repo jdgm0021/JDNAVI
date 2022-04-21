@@ -27,4 +27,9 @@ public class Fruteria {
         cola.remove(0);
         
     }
+    public void adelantarCliente(Persona nueva){
+        int n = cola.indexOf(nueva);
+        cola.add(n-1,nueva);
+        cola.remove(n+1);
+    }
 }
