@@ -169,6 +169,6 @@ public class Persona {
         }
     }
     public void abandonarCola(){
-        fruteria.getCola().remove(fruteria.getCola().indexOf(this));
+        fruteria.setCola(fruteria.getCola().remove(fruteria.getCola().indexOf(this)));
     }
 }
