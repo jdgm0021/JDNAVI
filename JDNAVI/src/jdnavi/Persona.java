@@ -4,6 +4,7 @@ public class Persona {
     String nombre;//Nombre de la persona
     boolean genero;//Genero de la persona; True -> Hombre; False -> Mujer
     int edad;//Edad de la persona
+    public Fruteria fruteria;
 
     public Persona() {
         this.genero = ((int) Math.floor(Math.random() * 2)) == 0;//Género aleatorio

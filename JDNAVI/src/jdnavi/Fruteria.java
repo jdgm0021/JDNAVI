@@ -16,7 +16,9 @@ public class Fruteria {
     }
     
     public void añadirCliente(){
-        cola.add(new Persona());
+        Persona nuevoCliente = new Persona();
+        nuevoCliente.fruteria = this;
+        cola.add(nuevoCliente);
     }
     
     public void atenderCliente(){
