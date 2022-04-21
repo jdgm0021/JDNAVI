@@ -30,4 +30,8 @@ public class Fruteria {
     public ArrayList<Persona> getCola() {
         return cola;
     }
+
+    public void setCola(ArrayList<Persona> cola) {
+        this.cola = cola;
+    }
 }
