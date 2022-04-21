@@ -32,4 +32,8 @@ public class Fruteria {
         cola.add(n-1,nueva);
         cola.remove(n+1);
     }
+    public void adelantarCliente(int n){
+        cola.add(n-1,cola.get(n));
+        cola.remove(n+1);
+    }
 }
