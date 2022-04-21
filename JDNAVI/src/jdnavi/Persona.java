@@ -1,5 +1,7 @@
 package jdnavi;
 
+import java.util.ArrayList;
+
 public class Persona {
     String nombre;//Nombre de la persona
     boolean genero;//Genero de la persona; True -> Hombre; False -> Mujer
@@ -169,6 +171,9 @@ public class Persona {
         }
     }
     public void abandonarCola(){
-        fruteria.setCola(fruteria.getCola().remove(fruteria.getCola().indexOf(this)));
+        ArrayList<Persona> cola = new ArrayList<>();
+        cola = fruteria.getCola();
+        cola.remove(fruteria.getCola().indexOf(this));
+        fruteria.setCola(cola);
     }
 }
