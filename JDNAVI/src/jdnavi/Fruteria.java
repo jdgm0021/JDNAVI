@@ -36,4 +36,12 @@ public class Fruteria {
         cola.add(n-1,cola.get(n));
         cola.remove(n+1);
     }
+    
+    public ArrayList<Persona> getCola() {
+        return cola;
+    }
+
+    public void setCola(ArrayList<Persona> cola) {
+        this.cola = cola;
+    }
 }
