@@ -180,7 +180,7 @@ public class Persona {
     public void dejarPasar(){
         ArrayList<Persona> cola;
         cola = fruteria.getCola();
-        cola.add(fruteria.getCola().indexOf(this),this);
+        cola.add((fruteria.getCola().indexOf(this))+2,this);
         cola.remove(fruteria.getCola().indexOf(this));
         fruteria.setCola(cola);
     }
