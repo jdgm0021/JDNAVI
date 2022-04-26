@@ -176,4 +176,12 @@ public class Persona {
         cola.remove(fruteria.getCola().indexOf(this));
         fruteria.setCola(cola);
     }
+    
+    public void dejarPasar(){
+        ArrayList<Persona> cola;
+        cola = fruteria.getCola();
+        cola.add(fruteria.getCola().indexOf(this),this);
+        cola.remove(fruteria.getCola().indexOf(this));
+        fruteria.setCola(cola);
+    }
 }
