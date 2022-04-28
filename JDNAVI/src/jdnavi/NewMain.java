@@ -10,6 +10,11 @@ public class NewMain {
         boolean salir = false;
         System.out.print("Introduce un nombre para tu fruteria: ");
         Fruteria fruteria = new Fruteria(scanner.nextLine());
+        
+        do {
+            
+        } while (!salir);
+        
     }
     
     public static void imprimirMenu(){
