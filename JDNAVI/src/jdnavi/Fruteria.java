@@ -35,18 +35,19 @@ public class Fruteria {
         cliente.fruteria = this;
     }
     
-    public void atenderCliente(){
+    public void atenderCliente(){ //Se atiende al cliente de la posicion 0, es decir el primero
         System.out.println("Se ha atendido al cliente " + cola.get(0).nombre);
         personasAtendidas.add(cola.get(0));
         cola.remove(0);
         
     }
-    public void adelantarCliente(Persona nueva){
+    public void adelantarCliente(Persona nueva){ //Se adelanta al cliente que se pasa como parametro
         int n = cola.indexOf(nueva);
         cola.add(n-1,nueva);
         cola.remove(n+1);
     }
-    public void adelantarCliente(int n){
+    
+    public void adelantarCliente(int n){ //Se adelanta al cliente que está en la posicion que se pasa como parametro
         cola.add(n-1,cola.get(n));
         cola.remove(n+1);
     }
@@ -67,7 +68,7 @@ public class Fruteria {
         System.out.println(this.cola);
     }
     
-    public void atrasarCliente(int nPersonaAdelantada){
+    public void atrasarCliente(int nPersonaAdelantada){ //Se atrasa al cliente que está en la posicion que se pasa como parametro
         cola.add(nPersonaAdelantada+1,cola.get(nPersonaAdelantada));
         cola.remove(nPersonaAdelantada-1);
     }
