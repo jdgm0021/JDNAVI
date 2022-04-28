@@ -1,10 +1,15 @@
 
 package jdnavi;
 
+import java.util.Scanner;
+
 public class NewMain {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         boolean salir = false;
+        System.out.print("Introduce un nombre para tu fruteria: ");
+        Fruteria fruteria = new Fruteria(scanner.nextLine());
     }
     
     public static void imprimirMenu(){
