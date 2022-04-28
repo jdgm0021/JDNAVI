@@ -9,13 +9,13 @@ public class Fruteria {
     private ArrayList<Persona> cola;
     private ArrayList<Persona> personasAtendidas;
     
-    public Fruteria(String name){
+    public Fruteria(String name){ //Constructor de la Fruteria
         this.nombre=name;
         this.cola= new ArrayList<>();
         this.personasAtendidas= new ArrayList<>();
     }
     
-    public void añadirCliente(String name, int age, boolean gender){
+    public void añadirCliente(String name, int age, boolean gender){ //Se añade un cliente a la cola y se crea el cliente a la vez
         if (age > 70) { //Si la edad es mayor a 70 lo añade en el quinto puesto
             Persona nuevoCliente = new Persona(name,age,gender);
             nuevoCliente.fruteria = this;
@@ -26,8 +26,8 @@ public class Fruteria {
             cola.add(nuevoCliente);
         }
     }
-    public void añadirCliente(Persona cliente){
-        if (cliente.edad > 70) {
+    public void añadirCliente(Persona cliente){ //Se añade un cliente ya creado
+        if (cliente.edad > 70) { //Si la edad es mayor a 70 lo añade en el quinto puesto
             cola.add(4, cliente);
         }else{
             cola.add(cliente);

@@ -8,7 +8,7 @@ public class Persona {
     int edad;//Edad de la persona
     public Fruteria fruteria;
 
-    public Persona() {
+    public Persona() { //Crea una persona aleatoria completamente
         this.genero = ((int) Math.floor(Math.random() * 2)) == 0;//Género aleatorio
         this.edad = (int) (Math.ceil(Math.random() * 77 + 13));//Edad aleatoria entre 14 y 90
         int ale = (int) (Math.ceil(Math.random() * 25));//Aleatorio para nombre
@@ -170,7 +170,7 @@ public class Persona {
             }
         }
     }
-    
+    //Constructor sobrecargado para creara personas custom
     public Persona(String name, int edad, boolean gender) {
         this.genero=gender;
         this.nombre=name;
@@ -184,7 +184,7 @@ public class Persona {
         fruteria.setCola(cola); //Cambiamos la cola por esta en fruteria
     }
     
-    public void dejarPasar(){
+    public void dejarPasar(){ //This persona deja pasar al que tiene detras 
         ArrayList<Persona> cola;
         cola = fruteria.getCola(); //Usamos la cola de Fruteria en Persona
         cola.add((fruteria.getCola().indexOf(this))+2,this); //Nos añadimos 2 puestos atrás para dejar pasar a una persona
