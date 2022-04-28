@@ -58,6 +58,7 @@ public class NewMain {
         System.out.println("5.- Atrasar un cliente");
         System.out.println("6.- Mostrar los clientes atendidos");
         System.out.println("7.- Mostrar los clientes no atendidos");
+        System.out.println("8.- Salir");
         System.out.print("Selecciona una opción: ");
     }
 }
