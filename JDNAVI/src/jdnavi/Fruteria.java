@@ -19,7 +19,7 @@ public class Fruteria {
         if (age > 70) { //Si la edad es mayor a 70 lo añade en el quinto puesto
             Persona nuevoCliente = new Persona(name,age,gender);
             nuevoCliente.fruteria = this;
-            cola.add(5, nuevoCliente);
+            cola.add(4, nuevoCliente);
         }else{
             Persona nuevoCliente = new Persona(name,age,gender);
             nuevoCliente.fruteria = this;
