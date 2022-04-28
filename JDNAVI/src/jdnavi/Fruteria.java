@@ -52,4 +52,9 @@ public class Fruteria {
     public void mostrarClientesNoAtendidos(){
         System.out.println(this.cola);
     }
+    
+    public void atrasarCliente(int nPersonaAdelantada){
+        cola.add(nPersonaAdelantada+1,cola.get(nPersonaAdelantada));
+        cola.remove(nPersonaAdelantada-1);
+    }
 }
