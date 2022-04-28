@@ -27,8 +27,12 @@ public class Fruteria {
         }
     }
     public void añadirCliente(Persona cliente){
+        if (cliente.edad > 70) {
+            cola.add(4, cliente);
+        }else{
+            cola.add(cliente);
+        }
         cliente.fruteria = this;
-        cola.add(cliente);
     }
     
     public void atenderCliente(){
