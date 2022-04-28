@@ -22,6 +22,17 @@ public class NewMain {
             
             switch(opcion) {
                 case 1:
+                    System.out.print("Introduce nombre para el nuevo cliente: ");
+                    String nombreCliente = scanner.nextLine();
+                    Persona "P-" + nombreCliente;
+                    System.out.println("");
+                    System.out.println("Quieres crear una persona aleatoria?");
+                    System.out.print("T -> Si; F -> No");
+                    if (scanner.nextLine().equals("T")) {
+                        nombreCliente = new Persona();
+                    } else {
+                        nombreCliente = new Persona(nombreCliente, edad, genero);
+                    }
                     break;
                 case 2:
                     break;
