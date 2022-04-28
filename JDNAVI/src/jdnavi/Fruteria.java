@@ -44,4 +44,8 @@ public class Fruteria {
     public void setCola(ArrayList<Persona> cola) {
         this.cola = cola;
     }
+    
+    public void mostrarClientesAtendidos(){
+        System.out.println(this.personasAtendidas);
+    }
 }
