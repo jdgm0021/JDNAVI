@@ -18,6 +18,7 @@ public class NewMain {
             System.out.println("");
             imprimirMenu();
             opcion = scanner.nextInt();
+            System.out.println("");
             
             switch(opcion) {
                 case 1:
@@ -44,7 +45,6 @@ public class NewMain {
     }
     
     public static void imprimirMenu(){
-        System.out.println("Selecciona una opción:");
         System.out.println("1.- Crear un cliente");
         System.out.println("2.- Añadir un cliente a la cola");
         System.out.println("3.- Atender un cliente");
@@ -52,5 +52,6 @@ public class NewMain {
         System.out.println("5.- Atrasar un cliente");
         System.out.println("6.- Mostrar los clientes atendidos");
         System.out.println("7.- Mostrar los clientes no atendidos");
+        System.out.print("Selecciona una opción: ");
     }
 }
