@@ -48,4 +48,8 @@ public class Fruteria {
     public void mostrarClientesAtendidos(){
         System.out.println(this.personasAtendidas);
     }
+    
+    public void mostrarClientesNoAtendidos(){
+        System.out.println(this.cola);
+    }
 }
