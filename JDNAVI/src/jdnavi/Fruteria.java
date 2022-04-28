@@ -15,10 +15,14 @@ public class Fruteria {
         this.personasAtendidas= new ArrayList<>();
     }
     
-    public void añadirCliente(){
-        Persona nuevoCliente = new Persona();
+    public void añadirCliente(String name, int age, boolean gender){
+        Persona nuevoCliente = new Persona(name,age,gender);
         nuevoCliente.fruteria = this;
         cola.add(nuevoCliente);
+    }
+    public void añadirCliente(Persona cliente){
+        cliente.fruteria = this;
+        cola.add(cliente);
     }
     
     public void atenderCliente(){
