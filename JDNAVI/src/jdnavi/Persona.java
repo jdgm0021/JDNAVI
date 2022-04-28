@@ -170,6 +170,13 @@ public class Persona {
             }
         }
     }
+    
+    public Persona(String name, int edad, boolean gender) {
+        this.genero=gender;
+        this.nombre=name;
+        this.edad=edad;
+    }
+    
     public void abandonarCola(){//Una persona va a poder abandonar la cola solo haciendo p1.abandonarCola(); es decir, sin usar Fruteria
         ArrayList<Persona> cola; 
         cola = fruteria.getCola(); //Usamos la cola de Fruteria en Persona
