@@ -63,6 +63,14 @@ public class Fruteria {
         cola.remove(nPersonaAdelantada);
     }
     
+    public void mostrarClientesAtendidos(){
+        System.out.println(this.personasAtendidas);
+    }
+    
+    public void mostrarClientesNoAtendidos(){
+        System.out.println(this.cola);
+    }
+    
     public ArrayList<Persona> getCola() {
         return cola;
     }
@@ -70,12 +78,8 @@ public class Fruteria {
     public void setCola(ArrayList<Persona> cola) {
         this.cola = cola;
     }
-    
-    public void mostrarClientesAtendidos(){
-        System.out.println(this.personasAtendidas);
-    }
-    
-    public void mostrarClientesNoAtendidos(){
-        System.out.println(this.cola);
+
+    public String getNombre() {
+        return nombre;
     }
 }
