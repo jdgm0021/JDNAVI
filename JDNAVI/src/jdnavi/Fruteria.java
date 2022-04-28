@@ -52,6 +52,11 @@ public class Fruteria {
         cola.remove(n+1);
     }
     
+    public void atrasarCliente(int nPersonaAdelantada){ //Se atrasa al cliente que está en la posicion que se pasa como parametro
+        cola.add(nPersonaAdelantada+1,cola.get(nPersonaAdelantada));
+        cola.remove(nPersonaAdelantada);
+    }
+    
     public ArrayList<Persona> getCola() {
         return cola;
     }
@@ -66,10 +71,5 @@ public class Fruteria {
     
     public void mostrarClientesNoAtendidos(){
         System.out.println(this.cola);
-    }
-    
-    public void atrasarCliente(int nPersonaAdelantada){ //Se atrasa al cliente que está en la posicion que se pasa como parametro
-        cola.add(nPersonaAdelantada+1,cola.get(nPersonaAdelantada));
-        cola.remove(nPersonaAdelantada-1);
     }
 }
