@@ -9,11 +9,12 @@ public class NewMain {
         Scanner scanner = new Scanner(System.in);
         boolean salir = false;
         int opcion;
+        int i = 0;
         System.out.print("Introduce un nombre para tu fruteria: ");
         Fruteria fruteria = new Fruteria(scanner.nextLine());
         System.out.println("");
         System.out.println("");
-        System.out.println("BIENVENIDO A TU NUEVA FRUTERIA '" + fruteria.getNombre() + "'.");
+        System.out.println("BIENVENIDO A FRUTERIA " + fruteria.getNombre().toUpperCase() + ".");
         do {
             System.out.println("");
             imprimirMenu();
@@ -23,15 +24,22 @@ public class NewMain {
             switch(opcion) {
                 case 1:
                     System.out.print("Introduce nombre para el nuevo cliente: ");
-                    String nombreCliente = scanner.nextLine();
-                    Persona "P-" + nombreCliente;
+                    String nombreCliente = scanner.next();
                     System.out.println("");
+                    Persona iPersona;
                     System.out.println("Quieres crear una persona aleatoria?");
-                    System.out.print("T -> Si; F -> No");
-                    if (scanner.nextLine().equals("T")) {
-                        nombreCliente = new Persona();
+                    System.out.print("T -> Si; F -> No  -- ");
+                    if (scanner.next().equals("T")) {
+                        iPersona = new Persona();
                     } else {
-                        nombreCliente = new Persona(nombreCliente, edad, genero);
+                        System.out.println("");
+                        System.out.print("Introduce la edad: ");
+                        int edad = scanner.nextInt();
+                        System.out.println("");
+                        System.out.println("Introduce el genero.");
+                        System.out.print("M -> Hombre; F -> Mujer -- ");
+                        boolean genero = scanner.next().equals("M");
+                        iPersona = new Persona(nombreCliente, edad, genero);
                     }
                     break;
                 case 2:
