@@ -35,6 +35,12 @@ public class NewMain {
                     break;
                 case 7:
                     break;
+                case 8:
+                    salir = true;
+                    System.out.println("");
+                    System.out.println("=======================");
+                    System.out.println("Gracias por usar JDNAVI");
+                    break;
                 default:
                     System.out.println("ERROR: Selecciona una opción correcta...");
                     break;
