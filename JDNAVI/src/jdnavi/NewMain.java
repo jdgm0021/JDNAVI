@@ -41,6 +41,7 @@ public class NewMain {
                         boolean genero = scanner.next().equals("M");
                         iPersona = new Persona(nombreCliente, edad, genero);
                     }
+                     System.out.println("Se ha creado el cliente " + iPersona.nombre + ", con " + iPersona.edad + " años y con genero " + iPersona.genero + ".");
                     break;
                 case 2:
                     break;
@@ -51,8 +52,10 @@ public class NewMain {
                 case 5:
                     break;
                 case 6:
+                    fruteria.mostrarClientesAtendidos();
                     break;
                 case 7:
+                    fruteria.mostrarClientesNoAtendidos();
                     break;
                 case 8:
                     salir = true;
