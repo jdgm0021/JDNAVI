@@ -111,10 +111,23 @@ public class FruteriaTest {
 
     @Test
     public void testAdelantarCliente_Persona() {
+        //1.- Preparar los datos de la prueba
+        Fruteria fru2 = new Fruteria("Fruteria");
+        Persona p3 = new Persona("Hasbullah", 18, true);
+        Persona p4 = new Persona("El Pepe", 21, true);
+        fru2.añadirCliente(p3);
+        fru2.añadirCliente(p4);
+        //2.- Probar
+        fru2.adelantarCliente(p4);
+        //3.- Verificar
+        assertEquals (p4, fru2.getCola().get(0));
     }
 
     @Test
     public void testAdelantarCliente_int() {
+        //1.- Preparar los datos de la prueba
+        //2.- Probar
+        //3.- Verificar
     }
 
     @Test
