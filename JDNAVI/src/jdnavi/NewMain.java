@@ -27,10 +27,10 @@ public class NewMain {
                     Persona iPersona;
                     System.out.println("Quieres crear una persona aleatoria?");
                     System.out.print("T -> Si; F -> No  -- ");
-                    System.out.println("");
                     if (scanner.next().equals("T")) {
                         iPersona = new Persona();
                     } else {
+                        System.out.println("");
                         System.out.print("Introduce nombre para el nuevo cliente: ");
                         String nombreCliente = scanner.next();
                         System.out.println("");
