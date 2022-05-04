@@ -42,8 +42,16 @@ public class PersonaTest {
         assertEquals( 0, fruteria.getCola().size());
     }
 
-    /*@Test
+    @Test
     public void testDejarPasar() {
-    }*/
+        Persona cliente2 = new Persona("Juanito",83,true);
+        Persona cliente3 = new Persona("Encarita Manuela de los Santos",46,false);
+        fruteria.añadirCliente(cliente2);
+        fruteria.añadirCliente(cliente3);
+        //2.- Probar
+        cliente2.dejarPasar();
+        //3.
+        assertEquals(cliente3,fruteria.getCola().get(1));
+    }
     
 }
