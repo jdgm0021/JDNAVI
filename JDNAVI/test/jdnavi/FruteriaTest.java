@@ -71,6 +71,29 @@ public class FruteriaTest {
         // 3.- Verificar      
         assertEquals( clientemayor, fru.getCola().get(4));
     }
+    
+    public void testAñadir8ClienteyDosMayores() {
+        // 1.- Preparar los datos de la prueba
+        Fruteria fru = new Fruteria("Fruteria");
+        
+        // 2.- Probar
+        fru.añadirCliente("Umtiti", 24, true);
+        fru.añadirCliente("Maria", 26, false);
+        fru.añadirCliente("Hasbullah", 56, false);
+        fru.añadirCliente("Andrea", 12, false);
+        fru.añadirCliente("Antonio", 34, true);
+        fru.añadirCliente("Maritto", 21, false);
+        fru.añadirCliente("Marta", 34, false);
+        fru.añadirCliente("Jose David", 12, true);
+        Persona clientemayor = new Persona("Alberto", 97, true);
+        Persona clientemayor1 = new Persona("Juan", 96, true);
+        fru.añadirCliente(clientemayor);
+        fru.añadirCliente(clientemayor1);
+        
+        // 3.- Verificar
+        assertEquals( clientemayor, fru.getCola().get(4));
+        assertEquals( clientemayor, fru.getCola().get(5));
+    }
 
     @Test
     public void testAtenderCliente() {
