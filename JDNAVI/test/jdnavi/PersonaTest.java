@@ -24,7 +24,21 @@ public class PersonaTest {
         cliente2.abandonarCola();
         //3.- Verificar
         assertEquals( 3, fruteria.getCola().size());
-        //assertEquals(cliente3, fruteria.getCola().get(2));
+    }
+    
+    @Test
+    public void testAbandonarColaCustom() {
+        //1.- Preparar
+        fruteria.añadirCliente("Umtiti", 24, true);
+        fruteria.añadirCliente("Maria", 45, false);
+        Persona cliente2 = new Persona("Antonio", 19, true);
+        fruteria.añadirCliente(cliente2);
+        Persona cliente3 = new Persona("Manuel", 67, false);
+        fruteria.añadirCliente(cliente3);
+        //2.- Probar
+        cliente2.abandonarCola();
+        //3.- Verificar
+        assertEquals(cliente3, fruteria.getCola().get(2));
     }
     
     @Test
@@ -44,14 +58,17 @@ public class PersonaTest {
 
     @Test
     public void testDejarPasar() {
-        Persona cliente2 = new Persona("Juanito",83,true);
-        Persona cliente3 = new Persona("Encarita Manuela de los Santos",46,false);
-        fruteria.añadirCliente(cliente2);
-        fruteria.añadirCliente(cliente3);
+        //1.- Preparar
+        Fruteria fruteria2 = new Fruteria("Fruteria Test2");
+        Persona cliente5 = new Persona("Juanito",6,true);
+        Persona cliente6 = new Persona("Encarita Manuela de los Santos",46,false);
+        fruteria2.añadirCliente(cliente5);
+        fruteria2.añadirCliente(cliente6);
         //2.- Probar
-        cliente2.dejarPasar();
-        //3.
-        assertEquals(cliente3,fruteria.getCola().get(1));
+        cliente5.dejarPasar();
+        //3.- Verificar
+        assertEquals(cliente6, fruteria2.getCola().get(0));
+        assertEquals( 2, fruteria2.getCola().size());
     }
     
 }
