@@ -9,9 +9,6 @@ public class FruteriaTest {
     public FruteriaTest() {
     }
 
-    /**
-     * Test of añadirCliente method, of class Fruteria.
-     */
     @Test
     public void testAñadirClientePrimerCliente() {
         // 1.- Preparar los datos de la prueba
@@ -26,7 +23,7 @@ public class FruteriaTest {
     }
     
     @Test
-    public void testAñadirClienteVariosClientesCliente() {
+    public void testAñadirClienteVariosClientes() {
         // 1.- Preparar los datos de la prueba
         Fruteria fru = new Fruteria("Fruteria");
         
@@ -41,58 +38,34 @@ public class FruteriaTest {
         
     }
 
-    /**
-     * Test of atenderCliente method, of class Fruteria.
-     */
     @Test
     public void testAtenderCliente() {
     }
 
-    /**
-     * Test of adelantarCliente method, of class Fruteria.
-     */
     @Test
     public void testAdelantarCliente_Persona() {
     }
 
-    /**
-     * Test of adelantarCliente method, of class Fruteria.
-     */
     @Test
     public void testAdelantarCliente_int() {
     }
 
-    /**
-     * Test of getCola method, of class Fruteria.
-     */
     @Test
     public void testGetCola() {
     }
 
-    /**
-     * Test of setCola method, of class Fruteria.
-     */
     @Test
     public void testSetCola() {
     }
 
-    /**
-     * Test of mostrarClientesAtendidos method, of class Fruteria.
-     */
     @Test
     public void testMostrarClientesAtendidos() {
     }
 
-    /**
-     * Test of mostrarClientesNoAtendidos method, of class Fruteria.
-     */
     @Test
     public void testMostrarClientesNoAtendidos() {
     }
 
-    /**
-     * Test of atrasarCliente method, of class Fruteria.
-     */
     @Test
     public void testAtrasarCliente() {
     }
