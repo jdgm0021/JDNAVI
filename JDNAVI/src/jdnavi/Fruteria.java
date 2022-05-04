@@ -59,16 +59,28 @@ public class Fruteria {
     }
     
     public void atrasarCliente(int nPersonaAdelantada){ //Se atrasa al cliente que está en la posicion que se pasa como parametro
-        cola.add(nPersonaAdelantada+1,cola.get(nPersonaAdelantada));
+        cola.add(nPersonaAdelantada+2,cola.get(nPersonaAdelantada));
         cola.remove(nPersonaAdelantada);
     }
     
     public void mostrarClientesAtendidos(){
-        System.out.println(this.personasAtendidas);
+        for (int i = 0; i<this.personasAtendidas.size(); i++) {
+            if (this.personasAtendidas.get(i).genero) {
+                System.out.println("Persona " + i + " -> Nombre: " + this.personasAtendidas.get(i).nombre + ", Género: Masculino, Edad: " + this.personasAtendidas.get(i).edad);
+            } else {
+                System.out.println("Persona " + i + " -> Nombre: " + this.personasAtendidas.get(i).nombre + ", Género: Femenino, Edad: " + this.personasAtendidas.get(i).edad);
+            }
+        }
     }
     
     public void mostrarClientesNoAtendidos(){
-        System.out.println(this.cola);
+        for (int i = 0; i<this.cola.size(); i++) {
+            if (this.cola.get(i).genero) {
+                System.out.println("Persona " + i + " -> Nombre: " + this.cola.get(i).nombre + ", Género: Masculino, Edad: " + this.cola.get(i).edad);
+            } else {
+                System.out.println("Persona " + i + " -> Nombre: " + this.cola.get(i).nombre + ", Género: Femenino, Edad: " + this.cola.get(i).edad);
+            }
+        }
     }
     
     public ArrayList<Persona> getCola() {
