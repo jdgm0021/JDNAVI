@@ -70,5 +70,4 @@ public class PersonaTest {
         assertEquals(cliente6, fruteria2.getCola().get(0));
         assertEquals( 2, fruteria2.getCola().size());
     }
-    
 }
