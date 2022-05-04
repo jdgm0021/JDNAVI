@@ -27,7 +27,7 @@ public class Fruteria {
         }
     }
     public void añadirCliente(Persona cliente){ //Se añade un cliente ya creado
-        if (cliente.edad > 70) { //Si la edad es mayor a 70 lo añade en el quinto puesto
+        if (cliente.edad > 70 && cola.size()>3) { //Si la edad es mayor a 70 lo añade en el quinto puesto
             cola.add(4, cliente);
         }else{
             cola.add(cliente);
