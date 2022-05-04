@@ -16,10 +16,12 @@ public class Persona {
     }
     
     public void abandonarCola(){//Una persona va a poder abandonar la cola solo haciendo p1.abandonarCola(); es decir, sin usar Fruteria
-        ArrayList<Persona> cola; 
+        ArrayList<Persona> cola;
         cola = fruteria.getCola(); //Usamos la cola de Fruteria en Persona
-        cola.remove(fruteria.getCola().indexOf(this)); //Eliminamos de esta cola a this
-        fruteria.setCola(cola); //Cambiamos la cola por esta en fruteria
+        if (cola.size()>0) { //Si la cola no tiene nada, no puede abandonar la cola
+            cola.remove(fruteria.getCola().indexOf(this)); //Eliminamos de esta cola a this
+            fruteria.setCola(cola); //Cambiamos la cola por esta en fruteria
+        }
     }
     
     public void dejarPasar(){ //This persona deja pasar al que tiene detras 
