@@ -97,6 +97,16 @@ public class FruteriaTest {
 
     @Test
     public void testAtenderCliente() {
+        //1.- Preparar los datos de la prueba
+        Fruteria fru = new Fruteria("Fruteria");
+        Persona p1 = new Persona("Hasbullah", 18, true);
+        Persona p2 = new Persona("El Pepe", 21, true);
+        fru.añadirCliente(p1);
+        fru.añadirCliente(p2);
+        //2.- Probar
+        fru.atenderCliente();
+        //3.- Verificar
+        assertEquals (p2, fru.getCola().get(0));
     }
 
     @Test
