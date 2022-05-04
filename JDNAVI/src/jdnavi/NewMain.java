@@ -25,23 +25,17 @@ public class NewMain {
                 case 1:
                     System.out.println("");
                     Persona iPersona;
-                    System.out.println("Quieres crear una persona aleatoria?");
-                    System.out.print("T -> Si; F -> No  -- ");
-                    if (scanner.next().equals("T")) {
-                        iPersona = new Persona();
-                    } else {
-                        System.out.println("");
-                        System.out.print("Introduce nombre para el nuevo cliente: ");
-                        String nombreCliente = scanner.next();
-                        System.out.println("");
-                        System.out.print("Introduce la edad: ");
-                        int edad = scanner.nextInt();
-                        System.out.println("");
-                        System.out.println("Introduce el genero.");
-                        System.out.print("M -> Hombre; F -> Mujer -- ");
-                        boolean genero = scanner.next().equals("M");
-                        iPersona = new Persona(nombreCliente, edad, genero);
-                    }
+                    System.out.println("");
+                    System.out.print("Introduce nombre para el nuevo cliente: ");
+                    String nombreCliente = scanner.next();
+                    System.out.println("");
+                    System.out.print("Introduce la edad: ");
+                    int edad = scanner.nextInt();
+                    System.out.println("");
+                    System.out.println("Introduce el genero.");
+                    System.out.print("M -> Hombre; F -> Mujer -- ");
+                    boolean genero = scanner.next().equals("M");
+                    iPersona = new Persona(nombreCliente, edad, genero);
                     if(iPersona.genero){
                         System.out.println("Se ha creado el cliente " + iPersona.nombre + ", con " + iPersona.edad + " años y con genero masculino.");
                     }else{
