@@ -70,6 +70,9 @@ public class NewMain {
                     fruteria.adelantarCliente(pos);
                     break;
                 case 5:
+                    System.out.print("Indica la posicion del cliente a atrasar: ");
+                    int pos2 = scanner.nextInt();
+                    fruteria.atrasarCliente(pos2);
                     break;
                 case 6:
                     fruteria.mostrarClientesAtendidos();
