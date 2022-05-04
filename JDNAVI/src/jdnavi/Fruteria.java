@@ -16,9 +16,9 @@ public class Fruteria {
     }
     
     public void añadirCliente(String name, int age, boolean gender){ //Se añade un cliente a la cola y se crea el cliente a la vez
-        if (age > 70) { //Si la edad es mayor a 70 lo añade en el quinto puesto
+        if (age > 70 && cola.size()>3) { //Si la edad es mayor a 70 lo añade en el quinto puesto
             Persona nuevoCliente = new Persona(name,age,gender);
-            nuevoCliente.fruteria = this;
+            nuevoCliente.fruteria = this;                           
             cola.add(4, nuevoCliente);
         }else{
             Persona nuevoCliente = new Persona(name,age,gender);
