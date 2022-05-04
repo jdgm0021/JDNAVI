@@ -23,15 +23,16 @@ public class NewMain {
             
             switch(opcion) {
                 case 1:
-                    System.out.print("Introduce nombre para el nuevo cliente: ");
-                    String nombreCliente = scanner.next();
                     System.out.println("");
                     Persona iPersona;
                     System.out.println("Quieres crear una persona aleatoria?");
                     System.out.print("T -> Si; F -> No  -- ");
+                    System.out.println("");
                     if (scanner.next().equals("T")) {
                         iPersona = new Persona();
                     } else {
+                        System.out.print("Introduce nombre para el nuevo cliente: ");
+                        String nombreCliente = scanner.next();
                         System.out.println("");
                         System.out.print("Introduce la edad: ");
                         int edad = scanner.nextInt();
@@ -41,7 +42,12 @@ public class NewMain {
                         boolean genero = scanner.next().equals("M");
                         iPersona = new Persona(nombreCliente, edad, genero);
                     }
-                     System.out.println("Se ha creado el cliente " + iPersona.nombre + ", con " + iPersona.edad + " años y con genero " + iPersona.genero + ".");
+                    if(iPersona.genero){
+                        System.out.println("Se ha creado el cliente " + iPersona.nombre + ", con " + iPersona.edad + " años y con genero masculino.");
+                    }else{
+                        System.out.println("Se ha creado el cliente " + iPersona.nombre + ", con " + iPersona.edad + " años y con genero femenino.");
+                    }
+                    
                     break;
                 case 2:
                     break;
