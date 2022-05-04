@@ -50,10 +50,24 @@ public class NewMain {
                     
                     break;
                 case 2:
+                    System.out.print("Introduce nombre para el nuevo cliente: ");
+                    String name = scanner.next();
+                    System.out.println("");
+                    System.out.print("Introduce la edad: ");
+                    int age = scanner.nextInt();
+                    System.out.println("");
+                    System.out.println("Introduce el genero.");
+                    System.out.print("M -> Hombre; F -> Mujer -- ");
+                    boolean gen = scanner.next().equals("M");
+                    fruteria.añadirCliente(name, age, gen);
                     break;
                 case 3:
+                    fruteria.atenderCliente();
                     break;
                 case 4:
+                    System.out.print("Indica la posicion del cliente a adelantar: ");
+                    int pos = scanner.nextInt();
+                    fruteria.adelantarCliente(pos);
                     break;
                 case 5:
                     break;
