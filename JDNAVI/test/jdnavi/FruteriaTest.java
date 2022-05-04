@@ -138,14 +138,6 @@ public class FruteriaTest {
     }
 
     @Test
-    public void testGetCola() {
-    }
-
-    @Test
-    public void testSetCola() {
-    }
-
-    @Test
     public void testMostrarClientesAtendidos() {
     }
 
