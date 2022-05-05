@@ -156,7 +156,8 @@ public class FruteriaTest {
         //2.- Probar
         fru4.atrasarCliente(p3);
         //3.- Verificar
-        assertEquals(p3, fru4.getCola().get(0));
+        assertEquals(p3, fru4.getCola().get(1));
+        assertEquals(p4, fru4.getCola().get(0));
     }
     
 }
