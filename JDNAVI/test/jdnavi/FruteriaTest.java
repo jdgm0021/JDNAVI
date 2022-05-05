@@ -160,4 +160,19 @@ public class FruteriaTest {
         assertEquals(p4, fru4.getCola().get(0));
     }
     
+    @Test
+    public void testAtrasarCliente_int() {
+        //1.- Preparar los datos de la prueba
+        Fruteria fru5 = new Fruteria("Fruteria");
+        Persona p3 = new Persona("Antonio", 34, true);
+        Persona p4 = new Persona("Vicentillo", 35, true);
+        fru5.añadirCliente(p3);
+        fru5.añadirCliente(p4);
+        //2.- Probar
+        fru5.atrasarCliente(0);
+        //3.- Verificar
+        assertEquals(p3, fru5.getCola().get(1));
+        assertEquals(p4, fru5.getCola().get(0));
+    }
+    
 }
