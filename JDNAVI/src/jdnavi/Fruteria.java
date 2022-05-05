@@ -54,7 +54,7 @@ public class Fruteria {
     
     public void atrasarCliente(Persona nueva){ //Se atrasa al cliente que se pasa como parametro
         int n = cola.indexOf(nueva);
-        cola.add(n+1,nueva);
+        cola.add(n+2,nueva);
         cola.remove(n);
     }
     
