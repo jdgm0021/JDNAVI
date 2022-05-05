@@ -112,15 +112,15 @@ public class FruteriaTest {
     @Test
     public void testAdelantarCliente_Persona() {
         //1.- Preparar los datos de la prueba
-        Fruteria fru2 = new Fruteria("Fruteria");
+        Fruteria fru1 = new Fruteria("Fruteria");
         Persona p3 = new Persona("Hasbullah", 18, true);
         Persona p4 = new Persona("El Pepe", 21, true);
-        fru2.añadirCliente(p3);
-        fru2.añadirCliente(p4);
+        fru1.añadirCliente(p3);
+        fru1.añadirCliente(p4);
         //2.- Probar
-        fru2.adelantarCliente(p4);
+        fru1.adelantarCliente(p4);
         //3.- Verificar
-        assertEquals (p4, fru2.getCola().get(0));
+        assertEquals (p4, fru1.getCola().get(0));
     }
 
     @Test
@@ -146,7 +146,17 @@ public class FruteriaTest {
     }
 
     @Test
-    public void testAtrasarCliente() {
+    public void testAtrasarCliente_Persona() {
+        //1.- Preparar los datos de la prueba
+        Fruteria fru4 = new Fruteria("Fruteria");
+        Persona p3 = new Persona("Manolito", 18, true);
+        Persona p4 = new Persona("Juanillo", 21, true);
+        fru4.añadirCliente(p3);
+        fru4.añadirCliente(p4);
+        //2.- Probar
+        fru4.atrasarCliente(p3);
+        //3.- Verificar
+        assertEquals(p3, fru4.getCola().get(0));
     }
     
 }
